@@ -1,0 +1,22 @@
+button {
+  background-color: white;
+  border: none;
+
+  height: 45px;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.937rem;
+  cursor: pointer;
+}
+button:hover:not(.blue) {
+  background-color: #f3f3f7;
+}
+
+img {
+  width: 50px;
+  width: 50px;
+  cursor: pointer;
+  padding: 0 20px;
+}

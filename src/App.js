@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { domestic } from './api/domesticData';
+import Nav from './components/Nav';
+import Home from './Pages/Home';
+import Country from './Pages/Country';
+import Maps from './Pages/Map';
+import Clinic from './Pages/Clinic';
 
 function App() {
+  const [totalData, setTotalData] = useState([]);
+
+  const domesticData = () => {
+    domestic().then((data) => {
+      setTotalData(data);
+    });
+  };
+
+  useEffect(domesticData, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Nav totalData={totalData} />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/map">
+            <Maps totalData={totalData} />
+          </Route>
+          <Route path="/country">
+            <Country />
+          </Route>
+          <Route>
+            <Clinic />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
