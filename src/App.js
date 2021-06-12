@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { domestic } from './api/domesticData';
 import Nav from './components/Nav';
 import Home from './Pages/Home';
-import Country from './Pages/Country';
-import Maps from './Pages/Map';
+import DomesticState from './Pages/DomesticState';
 import Clinic from './Pages/Clinic';
 
 function App() {
-  const [totalData, setTotalData] = useState([]);
+  const [domesticTotalData, setDomesticTotalData] = useState([]);
+  console.log(domesticTotalData);
 
   const domesticData = () => {
     domestic().then((data) => {
-      setTotalData(data);
+      setDomesticTotalData(data);
     });
   };
 
@@ -21,16 +21,16 @@ function App() {
   return (
     <>
       <Router>
-        <Nav totalData={totalData} />
+        <Nav domestic={domesticTotalData.domestic} />
         <Switch>
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/map">
-            <Maps totalData={totalData} />
-          </Route>
-          <Route path="/country">
-            <Country />
+          <Route path="/domestic">
+            <DomesticState
+              domestic={domesticTotalData.domestic}
+              local={domesticTotalData.local}
+            />
           </Route>
           <Route>
             <Clinic />

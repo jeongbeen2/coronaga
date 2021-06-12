@@ -30,7 +30,8 @@ export const NavBar = styled.div`
   }
 `;
 
-function Nav({ totalData }) {
+function Nav({ domestic }) {
+  console.log(domestic);
   return (
     <div>
       <NavBar>
@@ -39,20 +40,17 @@ function Nav({ totalData }) {
             <img src="https://cdn4.iconfinder.com/data/icons/stop-virus-outline-iconset/128/ic_distancing-512.png" />
           </Link>
 
-          <Link to="/map">
-            <button>코로나 맵</button>
-          </Link>
-          <Link to="/country">
-            <button>시도별 발생동향</button>
+          <Link to="/domestic">
+            <button>국내 현황</button>
           </Link>
           <Link to="/clinic">
             <button>선별 진료소</button>
           </Link>
         </div>
         <div className="header__right-content">
-          <button>국내 확진자 수: {totalData.TotalCase}</button>
+          <button>국내 확진자 수: {domestic.TotalCase}</button>
           <button className="blue">
-            국내 완치자 수: {totalData.TotalRecovered}
+            국내 완치자 수: {domestic.TotalRecovered}
           </button>
         </div>
       </NavBar>
