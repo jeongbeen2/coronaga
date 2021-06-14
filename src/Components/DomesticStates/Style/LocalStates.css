@@ -1,0 +1,11 @@
+.localState_Group {
+  margin-top: -50px;
+  width: 100%;
+}
+
+.localState_row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 50px;
+}

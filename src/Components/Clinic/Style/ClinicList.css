@@ -1,0 +1,33 @@
+.clinic_list_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clinic_input {
+  width: 80%;
+  height: 2rem;
+}
+
+.search_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(43, 102, 255);
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 95%;
+  height: 4rem;
+  margin-bottom: 20px;
+}
+
+input {
+  border: none;
+  font-size: 1.5rem;
+  border-right: 1.5px solid rgba(43, 102, 255, 0.3);
+  margin-left: 15px;
+}
+
+input:focus {
+  outline: none;
+}

@@ -1,0 +1,24 @@
+.local_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
+  width: 200px;
+  height: 150px;
+  border-radius: 2px;
+  box-shadow: 0 3px 9px 0 rgb(169 184 200 / 15%);
+  margin: 25px;
+  transition: 0.5s;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.local_card:hover {
+  transform: translateY(-0.5em);
+  transition: 0.5s;
+}
+
+.title {
+  font-size: 1.5rem;
+}

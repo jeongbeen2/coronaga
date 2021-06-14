@@ -1,0 +1,23 @@
+.clinic_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1.3px solid rgba(2, 7, 21, 0.2);
+  padding-left: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  margin: 5px;
+  height: 80px;
+}
+
+.clinic_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clinic_title {
+  font-size: 1.3rem;
+  color: #2b66ff;
+}

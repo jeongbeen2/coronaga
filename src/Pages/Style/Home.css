@@ -1,0 +1,17 @@
+.card-news > img {
+  width: 100%;
+}
+
+.card-news {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid white;
+  overflow-y: scroll;
+}
+
+.home {
+  display: flex;
+}
