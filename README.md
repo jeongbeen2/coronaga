@@ -25,6 +25,7 @@
 ## 3. 선별 진료소 안내
 
 ![스크린샷 2021-06-14 오후 11 48 18](https://user-images.githubusercontent.com/68345069/121912650-b8c44f80-cd6b-11eb-9695-3a5efe7ab8c7.png)
-[스크린샷 2021-06-14 오후 11 48 44](https://user-images.githubusercontent.com/68345069/121912719-c679d500-cd6b-11eb-9ec4-04093e0aaf01.png)
+
+![스크린샷 2021-06-14 오후 11 48 44](https://user-images.githubusercontent.com/68345069/121912719-c679d500-cd6b-11eb-9ec4-04093e0aaf01.png)
 
 경기도내에 있는 인증된 선별 진료소를 검색할 수 있습니다.
