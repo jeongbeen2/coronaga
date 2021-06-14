@@ -10,8 +10,8 @@ function Clinic() {
   const [isLoading, setIsLoading] = useState(true);
   const [LatLng, setLatLng] = useState([]);
 
-  const handleLatLng = (LAT, LOGT) => {
-    setLatLng([LAT, LOGT]);
+  const handleLatLng = (LAT, LOGT, MEDCARE_INST_NM) => {
+    setLatLng([LAT, LOGT, MEDCARE_INST_NM]);
   };
 
   function importClinicData(search) {
@@ -45,7 +45,13 @@ function Clinic() {
           />
         </div>
         <div className="clinic_map">
-          {!LatLng[0] ? null : <ClinicMap search={search} LatLng={LatLng} />}
+          {!LatLng[0] ? null : (
+            <ClinicMap
+              search={search}
+              LatLng={LatLng}
+              clinicData={clinicData}
+            />
+          )}
         </div>
       </div>
     </>

@@ -1,9 +1,8 @@
 import React from 'react';
 import './Style/ClinicPoint.css';
 
-function ClinicPoint({ item, id, handleLatLng }) {
+function ClinicPoint({ item, handleLatLng }) {
   const {
-    SIGUN_NM,
     MEDCARE_INST_NM,
     EMGNCY_CENTER_TELNO,
     REFINE_LOTNO_ADDR,
@@ -14,8 +13,9 @@ function ClinicPoint({ item, id, handleLatLng }) {
   return (
     <>
       <div
-        key={id}
-        onClick={() => handleLatLng(REFINE_WGS84_LAT, REFINE_WGS84_LOGT)}
+        onClick={() =>
+          handleLatLng(REFINE_WGS84_LAT, REFINE_WGS84_LOGT, MEDCARE_INST_NM)
+        }
         className="clinic_card"
       >
         <div className="clinic_title">

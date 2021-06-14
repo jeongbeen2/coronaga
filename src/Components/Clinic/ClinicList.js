@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ClinicPoint from './ClinicPoint';
 import './Style/ClinicList.css';
 
@@ -37,15 +37,13 @@ function ClinicList({
           <>
             {clinicData.map((item, id) => {
               return (
-                <>
-                  <div>
-                    <ClinicPoint
-                      item={item}
-                      id={id}
-                      handleLatLng={handleLatLng}
-                    />
-                  </div>
-                </>
+                <div>
+                  <ClinicPoint
+                    key={id}
+                    item={item}
+                    handleLatLng={handleLatLng}
+                  />
+                </div>
               );
             })}
           </>
