@@ -29,3 +29,12 @@
 ![스크린샷 2021-06-14 오후 11 48 44](https://user-images.githubusercontent.com/68345069/121912719-c679d500-cd6b-11eb-9ec4-04093e0aaf01.png)
 
 경기도내에 있는 인증된 선별 진료소를 검색할 수 있습니다.
+
+## 사용한 API
+
+- 국내 코로나 동향 API
+  https://github.com/dhlife09/Corona-19-API
+- 선별진료소 API
+  https://data.gg.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=461Q599QLK8UTE14E3LW12837248&infSeq=3&order=&loc=
+- 카카오 Map API
+  https://apis.map.kakao.com/
