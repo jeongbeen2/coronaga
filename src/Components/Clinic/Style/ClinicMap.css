@@ -10,3 +10,18 @@
   width: 100%;
   height: 100%;
 }
+
+.go-to-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  font-size: 1.4rem;
+  height: 37px;
+  text-align: center;
+  transition: 0.25s;
+}
+.go-to-link:hover {
+  color: #2b66ff;
+  transition: 0.25s;
+}

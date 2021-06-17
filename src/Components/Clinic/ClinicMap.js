@@ -29,7 +29,7 @@ function ClinicMap({ LatLng }) {
     marker.setMap(map);
 
     // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-    var iwContent = `<a href='https://map.kakao.com/link/search/${MEDCARE_INST_NM}' target='_blank'><div style='padding:20px'>바로 가기</div></a>`;
+    var iwContent = `<a class='go-to-link' href='https://map.kakao.com/link/search/${MEDCARE_INST_NM}' target='_blank'><div>바로 가기</div></a>`;
 
     // 인포윈도우를 생성합니다
     var infowindow = new kakao.maps.InfoWindow({

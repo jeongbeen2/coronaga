@@ -1,5 +1,5 @@
 import React from 'react';
-import './Style/CardGroup.css';
+import './Style/MainCardGroup.css';
 import CountUp from 'react-countup';
 
 function CardGroup({ domestic, local }) {
@@ -17,6 +17,8 @@ function CardGroup({ domestic, local }) {
     korea: { newCase },
   } = local;
 
+  // ? ###########  string number -> number #########
+  // ex) 143, 733 -> 143733
   const changeNumber = (num) => {
     let result = '';
     for (let i = 0; i < num.length; i++) {
@@ -32,7 +34,7 @@ function CardGroup({ domestic, local }) {
       <div className="row">
         <h1>국내 현황판</h1>
       </div>
-      <div className="card-group">
+      <div className="main_card-group">
         <div className="card">
           <div className="domestic_total">
             국내 총 확진자 : <CountUp end={changeNumber(TotalCase)} /> 명

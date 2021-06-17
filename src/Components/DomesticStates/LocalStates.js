@@ -25,30 +25,84 @@ function LocalStates({ local }) {
   } = local;
   return (
     <>
-      <div className="localState_Group">
+      <div className="localState_group">
         <div className="localState_row">
-          <LocalState city={korea} />
-          <LocalState city={seoul} />
-          <LocalState city={gyeonggi} />
-          <LocalState city={daegu} />
-          <LocalState city={incheon} />
-          <LocalState city={busan} />
+          <a href="http://ncov.mohw.go.kr/" target="_blank">
+            <LocalState city={korea} />
+          </a>
+          <a
+            href="https://www.seoul.go.kr/coronaV/coronaStatus.do"
+            target="_blank"
+          >
+            <LocalState city={seoul} />
+          </a>
+          <a
+            href="https://www.gg.go.kr/contents/contents.do?ciIdx=1150&menuId=2909"
+            target="_blank"
+          >
+            <LocalState city={gyeonggi} />
+          </a>
+          <a href="http://covid19.daegu.go.kr/index.html" target="_blank">
+            <LocalState city={daegu} />
+          </a>
+          <a href="https://www.incheon.go.kr/health/HE020409" target="_blank">
+            <LocalState city={incheon} />
+          </a>
+          <a href="https://www.busan.go.kr/covid19/Corona19.do" target="_blank">
+            <LocalState city={busan} />
+          </a>
         </div>
         <div className="localState_row">
-          <LocalState city={gyeongnam} />
-          <LocalState city={gyeongbuk} />
-          <LocalState city={chungnam} />
-          <LocalState city={gangwon} />
-          <LocalState city={chungbuk} />
-          <LocalState city={gwangju} />
+          <a
+            href="http://xn--19-q81ii1knc140d892b.kr/main/main.do"
+            target="_blank"
+          >
+            <LocalState city={gyeongnam} />
+          </a>
+          <a
+            href="https://gb.go.kr/Main/open_contents/section/wel/page.do?mnu_uid=5856&LARGE_CODE=360&MEDIUM_CODE=90"
+            target="_blank"
+          >
+            <LocalState city={gyeongbuk} />
+          </a>
+          <a href="http://www.chungnam.go.kr/coronaStatus.do" target="_blank">
+            <LocalState city={chungnam} />
+          </a>
+          <a href="https://www.provin.gangwon.kr/covid-19.html" target="_blank">
+            <LocalState city={gangwon} />
+          </a>
+          <a
+            href="https://www1.chungbuk.go.kr/covid-19/index.do"
+            target="_blank"
+          >
+            <LocalState city={chungbuk} />
+          </a>
+          <a href="https://www.gjcity.go.kr/corona_index.jsp" target="_blank">
+            <LocalState city={gwangju} />
+          </a>
         </div>
         <div className="localState_row">
-          <LocalState city={ulsan} />
-          <LocalState city={daejeon} />
-          <LocalState city={jeonbuk} />
-          <LocalState city={jeonnam} />
-          <LocalState city={jeju} />
-          <LocalState city={sejong} />
+          <a href="https://covid19.ulsan.go.kr/index.do" target="_blank">
+            <LocalState city={ulsan} />
+          </a>
+          <a href="https://www.daejeon.go.kr/corona19/index.do" target="_blank">
+            <LocalState city={daejeon} />
+          </a>
+          <a
+            href="https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000105&menuCd=DOM_000000110001000000&contentsSid=1219&cpath="
+            target="_blank"
+          >
+            <LocalState city={jeonbuk} />
+          </a>
+          <a href="https://www.jeonnam.go.kr/coronaMainPage.do" target="_blank">
+            <LocalState city={jeonnam} />
+          </a>
+          <a href="https://covid19.jeju.go.kr/" target="_blank">
+            <LocalState city={jeju} />
+          </a>
+          <a href="https://www.sejong.go.kr/bbs/R3620/list.do" target="_blank">
+            <LocalState city={sejong} />
+          </a>
         </div>
       </div>
     </>

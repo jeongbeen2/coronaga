@@ -52,10 +52,14 @@ function Nav({ domestic, local }) {
           </Link>
         </div>
         <div className="header__right-content">
-          <button>국내 총 확진자 수 : {domestic.TotalCase}</button>
-          <button className="blue">
-            일일 확진자 수 : {local.korea.newCase}
-          </button>
+          <Link to="/domestic">
+            <button>국내 총 확진자 수 : {domestic.TotalCase}</button>
+          </Link>
+          <Link to="/domestic">
+            <button className="blue">
+              일일 확진자 수 : {local.korea.newCase}
+            </button>
+          </Link>
         </div>
       </NavBar>
     </div>

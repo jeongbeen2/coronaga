@@ -1,11 +1,11 @@
 import React from 'react';
-import CardGroup from '../Components/DomesticStates/CardGroup';
+import MainCardGroup from '../Components/DomesticStates/MainCardGroup';
 import LocalStates from '../Components/DomesticStates/LocalStates';
 
 function DomesticState({ domestic, local }) {
   return (
     <>
-      <CardGroup domestic={domestic} local={local} />
+      <MainCardGroup domestic={domestic} local={local} />
       <LocalStates local={local} />
     </>
   );

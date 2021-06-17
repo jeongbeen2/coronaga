@@ -7,11 +7,11 @@ function LocalState({ city }) {
     <>
       <div className="local_card">
         {countryName === '합계' ? (
-          <div className="title" style={{ color: '#2b66ff' }}>
+          <div className="card_title" style={{ color: '#2b66ff' }}>
             대한민국
           </div>
         ) : (
-          <div className="title" style={{ color: '#2b66ff' }}>
+          <div className="card_title" style={{ color: '#2b66ff' }}>
             {countryName}
           </div>
         )}
