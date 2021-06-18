@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
-import './App.css';
-import Home from './Pages/Home';
+import { Switch, Route } from 'react-router-dom';
+import LoadingScreen from 'react-loading-screen';
+
+import { domestic } from './api/domesticData';
 import Nav from './Components/Nav/Nav';
+import Home from './Pages/Home';
 import Clinic from './Pages/Clinic';
 import Vaccine from './Pages/Vaccine';
-import { domestic } from './api/domesticData';
 import DomesticState from './Pages/DomesticState';
-import LoadingScreen from 'react-loading-screen';
-import { Switch, Route } from 'react-router-dom';
+
+import './App.css';
 
 function App() {
   const [domesticTotalData, setDomesticTotalData] = useState([]);

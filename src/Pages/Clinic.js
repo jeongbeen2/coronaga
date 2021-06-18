@@ -6,13 +6,17 @@ import './Style/Clinic.css';
 
 function Clinic() {
   const [clinicData, setClinicData] = useState('검색어를 입력하세요!');
-  const [search, setSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [search, setSearch] = useState('');
   const [LatLng, setLatLng] = useState([]);
 
-  const handleLatLng = (LAT, LOGT, MEDCARE_INST_NM) => {
+  function handleLatLng(LAT, LOGT, MEDCARE_INST_NM) {
     setLatLng([LAT, LOGT, MEDCARE_INST_NM]);
-  };
+  }
+
+  function handleSearch(value) {
+    setSearch(value);
+  }
 
   function importClinicData(search) {
     setIsLoading(true);
@@ -27,21 +31,17 @@ function Clinic() {
     });
   }
 
-  function handleSearch(value) {
-    setSearch(value);
-  }
-
   return (
     <>
       <div className="clinic_body">
         <div className="clinic_list">
           <ClinicList
             search={search}
-            clinicData={clinicData}
             isLoading={isLoading}
-            importClinicData={importClinicData}
+            clinicData={clinicData}
             handleSearch={handleSearch}
             handleLatLng={handleLatLng}
+            importClinicData={importClinicData}
           />
         </div>
         <div className="clinic_map">

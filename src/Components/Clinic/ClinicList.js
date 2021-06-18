@@ -24,7 +24,10 @@ function ClinicList({
               placeholder="검색어를 입력하세요."
             />
             <button onClick={() => importClinicData(search)}>
-              <img src="https://cdn1.iconfinder.com/data/icons/mixed-17/16/Icon_search-256.png" />
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/mixed-17/16/Icon_search-256.png"
+                alt="finder"
+              />
             </button>
           </div>
         </div>

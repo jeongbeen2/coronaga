@@ -28,9 +28,9 @@ npm CountUp 라이브러리를 사용하여, 메인 카드의 숫자가 올라�
 
 ## 3. 선별 진료소 안내
 
-![스크린샷 2021-06-17 오후 9 05 53](https://user-images.githubusercontent.com/68345069/122393892-560fc580-cfb0-11eb-9260-4f4968a2a01c.png)
+![clinic_1](https://user-images.githubusercontent.com/68345069/122393892-560fc580-cfb0-11eb-9260-4f4968a2a01c.png)
 
-![스크린샷 2021-06-17 오후 9 08 39](https://user-images.githubusercontent.com/68345069/122393909-5ad47980-cfb0-11eb-8ebc-201a7750f632.png)
+![clinic_2](https://user-images.githubusercontent.com/68345069/122393909-5ad47980-cfb0-11eb-8ebc-201a7750f632.png)
 
 경기도내에 있는 인증된 선별 진료소를 검색할 수 있습니다.<br/>
 카카오맵 API를 이용하여, 검색한 결과중 원하는 값을 클릭하면 선별진료소의 위치가 나옵니다.<br/>
@@ -39,11 +39,11 @@ npm CountUp 라이브러리를 사용하여, 메인 카드의 숫자가 올라�
 
 ## 사용한 API
 
-- 국내 코로나 동향 API
+- 국내 코로나 동향 API<br/>
   https://github.com/dhlife09/Corona-19-API
 
-- 선별진료소 API
+- 선별진료소 API<br/>
   https://data.gg.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=461Q599QLK8UTE14E3LW12837248&infSeq=3&order=&loc=
 
-- 카카오 Map API
+- 카카오 Map API<br/>
   https://apis.map.kakao.com/

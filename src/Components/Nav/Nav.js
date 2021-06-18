@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 
 export const NavBar = styled.div`
+  z-index: 999;
   margin: 0;
   top: 0;
   position: fixed;
