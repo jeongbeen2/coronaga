@@ -45,12 +45,8 @@ function ClinicList({
           <>
             {clinicData.map((item, id) => {
               return (
-                <div>
-                  <ClinicPoint
-                    key={id}
-                    item={item}
-                    handleLatLng={handleLatLng}
-                  />
+                <div key={id}>
+                  <ClinicPoint item={item} handleLatLng={handleLatLng} />
                 </div>
               );
             })}

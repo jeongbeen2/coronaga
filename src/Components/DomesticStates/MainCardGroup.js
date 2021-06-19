@@ -18,7 +18,7 @@ function CardGroup({ domestic, local }) {
   } = local;
 
   // ? ###########  string number -> number #########
-  // ex) 143, 733 -> 143733
+  // ex) 143,733 -> 143733
   const changeNumber = (num) => {
     let result = '';
     for (let i = 0; i < num.length; i++) {
