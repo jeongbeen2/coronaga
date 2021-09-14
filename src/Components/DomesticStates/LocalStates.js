@@ -1,6 +1,6 @@
-import React from 'react';
-import LocalState from './LocalState';
-import './Style/LocalStates.css';
+import React from "react";
+import LocalState from "./LocalState";
+import "./Style/LocalStates.css";
 
 function LocalStates({ local }) {
   const {

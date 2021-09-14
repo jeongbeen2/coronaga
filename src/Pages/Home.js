@@ -1,6 +1,6 @@
-import React from 'react';
-import './Style/Home.css';
-const CardNews = require('../static/CardNews.js')[0];
+import React from "react";
+import "./Style/Home.css";
+const CardNews = require("../static/CardNews.js")[0];
 const { firstCardNews, secondCardNews } = CardNews;
 function Home() {
   return (

@@ -51,6 +51,9 @@ function Nav({ domestic, local }) {
           <Link to="/clinic">
             <button>선별 진료소</button>
           </Link>
+          <Link to="/vaccine">
+            <button>백신 예방접종 통계</button>
+          </Link>
         </div>
         <div className="header__right-content">
           <Link to="/domestic">

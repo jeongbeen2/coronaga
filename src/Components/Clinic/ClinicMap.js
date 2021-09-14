@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import './Style/ClinicMap.css';
+import React, { useEffect } from "react";
+import "./Style/ClinicMap.css";
 const { kakao } = window;
 
 function ClinicMap({ LatLng }) {
   const [Lat, Lng, MEDCARE_INST_NM] = LatLng;
 
   useEffect(() => {
-    let container = document.getElementById('map');
+    let container = document.getElementById("map");
     let options = {
       center: new kakao.maps.LatLng(Lat, Lng),
       draggable: false,
@@ -37,7 +37,7 @@ function ClinicMap({ LatLng }) {
     });
 
     // 마커에 클릭이벤트를 등록합니다
-    kakao.maps.event.addListener(marker, 'mouseover', function () {
+    kakao.maps.event.addListener(marker, "mouseover", function () {
       // 마커 위에 인포윈도우를 표시합니다
       infowindow.open(map, marker);
     });

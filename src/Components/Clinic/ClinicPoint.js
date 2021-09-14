@@ -1,5 +1,5 @@
-import React from 'react';
-import './Style/ClinicPoint.css';
+import React from "react";
+import "./Style/ClinicPoint.css";
 
 function ClinicPoint({ item, handleLatLng }) {
   const {

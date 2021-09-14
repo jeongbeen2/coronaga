@@ -1,6 +1,6 @@
-import React from 'react';
-import ClinicPoint from './ClinicPoint';
-import './Style/ClinicList.css';
+import React from "react";
+import ClinicPoint from "./ClinicPoint";
+import "./Style/ClinicList.css";
 
 function ClinicList({
   handleSearch,
@@ -32,7 +32,7 @@ function ClinicList({
           </div>
         </div>
         {isLoading ? (
-          typeof clinicData === 'string' ? (
+          typeof clinicData === "string" ? (
             <div className="clinic_list_first">
               <div>동네 이름으로 검색이 가능합니다.</div>
               <div>바로 검색버튼을 누를 시 전체 목록이 나옵니다.</div>
@@ -45,9 +45,7 @@ function ClinicList({
           <>
             {clinicData.map((item, id) => {
               return (
-                <div key={id}>
-                  <ClinicPoint item={item} handleLatLng={handleLatLng} />
-                </div>
+                <ClinicPoint key={id} item={item} handleLatLng={handleLatLng} />
               );
             })}
           </>
