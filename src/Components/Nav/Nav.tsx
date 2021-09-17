@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import './Nav.css';
+import "./Nav.css";
 
 export const NavBar = styled.div`
   z-index: 999;
@@ -35,14 +35,14 @@ export const NavBar = styled.div`
   }
 `;
 
-function Nav({ domestic, local }) {
+function Nav({ domestic, local }: any): JSX.Element {
   return (
     <div>
       <NavBar>
         <div className="header__left-content">
           <Link to="/">
             <h1>
-              Coro<span style={{ color: '#2B66FF' }}>naga!</span>
+              Coro<span style={{ color: "#2B66FF" }}>naga!</span>
             </h1>
           </Link>
           <Link to="/domestic">

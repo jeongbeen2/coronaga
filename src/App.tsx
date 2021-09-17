@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import LoadingScreen from 'react-loading-screen';
+import { useState, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
+import LoadingScreen from "react-loading-screen";
 
-import { domestic } from './api/domesticData';
-import Nav from './Components/Nav/Nav';
-import Home from './Pages/Home';
-import Clinic from './Pages/Clinic';
-import Vaccine from './Pages/Vaccine';
-import DomesticState from './Pages/DomesticState';
+import { domestic } from "./api/domesticData";
+import Nav from "./Components/Nav/Nav";
+import Home from "./Pages/Home";
+import Clinic from "./Pages/Clinic";
+import Vaccine from "./Pages/Vaccine";
+import DomesticState from "./Pages/DomesticState";
 
-import './App.css';
+import "./App.css";
 
-function App() {
+function App(): JSX.Element {
   const [domesticTotalData, setDomesticTotalData] = useState([]);
   const [localTotalData, setLocalTotalData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   function importDomesticData() {
     setIsLoading(true);
-    domestic().then((data) => {
+    domestic().then((data: any) => {
       setDomesticTotalData(data.domestic);
       setLocalTotalData(data.local);
       setIsLoading(false);

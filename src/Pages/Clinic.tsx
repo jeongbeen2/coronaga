@@ -5,25 +5,25 @@ import ClinicMap from "../Components/Clinic/ClinicMap";
 import "./Style/Clinic.css";
 
 function Clinic() {
-  const [clinicData, setClinicData] = useState("검색어를 입력하세요!");
-  const [isLoading, setIsLoading] = useState(true);
-  const [search, setSearch] = useState("");
-  const [LatLng, setLatLng] = useState([]);
+  const [clinicData, setClinicData] = useState<string>("검색어를 입력하세요!");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [search, setSearch] = useState<string>("");
+  const [LatLng, setLatLng] = useState([]) as any;
 
-  function handleLatLng(LAT, LOGT, MEDCARE_INST_NM) {
+  function handleLatLng(LAT: any, LOGT: any, MEDCARE_INST_NM: any) {
     setLatLng([LAT, LOGT, MEDCARE_INST_NM]);
   }
 
-  function handleSearch(value) {
+  function handleSearch(value: any) {
     setSearch(value);
   }
 
-  function importClinicData(search) {
+  function importClinicData(search: any) {
     setIsLoading(true);
-    clinic(search).then((data) => {
+    clinic(search).then((data: any) => {
       if (!data.EmgMedInfo) {
         console.log("데이터없음");
-        setClinicData([]);
+        setClinicData("");
       } else {
         setClinicData(data.EmgMedInfo[1].row);
       }

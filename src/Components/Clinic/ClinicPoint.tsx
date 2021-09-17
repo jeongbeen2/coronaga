@@ -1,7 +1,7 @@
 import React from "react";
 import "./Style/ClinicPoint.css";
 
-function ClinicPoint({ item, handleLatLng }) {
+function ClinicPoint({ item, handleLatLng }: any): JSX.Element {
   const {
     MEDCARE_INST_NM,
     EMGNCY_CENTER_TELNO,

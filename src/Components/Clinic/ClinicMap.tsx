@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Style/ClinicMap.css";
 const { kakao } = window;
 
-function ClinicMap({ LatLng }) {
+function ClinicMap({ LatLng }: any): JSX.Element {
   const [Lat, Lng, MEDCARE_INST_NM] = LatLng;
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function ClinicMap({ LatLng }) {
       level: 3,
     };
     let map = new kakao.maps.Map(container, options); // 지도를 생성합니다
-    function setDraggable(draggable) {
+    function setDraggable(draggable: any) {
       // 마우스 드래그로 지도 이동 가능여부를 설정합니다
       map.setDraggable(draggable);
     }

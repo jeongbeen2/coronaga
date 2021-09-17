@@ -2,7 +2,7 @@ import React from "react";
 import MainCardGroup from "../Components/DomesticStates/MainCardGroup";
 import LocalStates from "../Components/DomesticStates/LocalStates";
 
-function DomesticState({ domestic, local }) {
+function DomesticState({ domestic, local }: any): JSX.Element {
   return (
     <>
       <MainCardGroup domestic={domestic} local={local} />

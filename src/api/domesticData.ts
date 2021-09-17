@@ -1,5 +1,5 @@
-import axios from 'axios';
-const { DOMESTIC, LOCAL } = require('./personalKey')[0];
+import axios from "axios";
+const { DOMESTIC, LOCAL } = require("./personalKey")[0];
 export function domestic() {
   const domesticCounterApi = `https://api.corona-19.kr/korea/?serviceKey=${DOMESTIC}`;
   const localCounterApi = `https://api.corona-19.kr/korea/country/new/?serviceKey=${LOCAL}`;

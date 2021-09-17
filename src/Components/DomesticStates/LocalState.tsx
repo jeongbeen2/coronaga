@@ -1,7 +1,7 @@
 import React from "react";
 import "./Style/LocalState.css";
 
-function LocalState({ city }) {
+function LocalState({ city }: any): JSX.Element {
   const { countryName, totalCase, newCase, recovered, death } = city;
   return (
     <>

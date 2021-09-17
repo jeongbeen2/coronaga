@@ -2,7 +2,7 @@ import React from "react";
 import LocalState from "./LocalState";
 import "./Style/LocalStates.css";
 
-function LocalStates({ local }) {
+function LocalStates({ local }: any): JSX.Element {
   const {
     korea,
     seoul,

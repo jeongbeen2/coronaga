@@ -9,7 +9,7 @@ function ClinicList({
   clinicData,
   isLoading,
   handleLatLng,
-}) {
+}: any): JSX.Element {
   return (
     <>
       <div className="clinic_list_body">
@@ -43,7 +43,7 @@ function ClinicList({
           )
         ) : (
           <>
-            {clinicData.map((item, id) => {
+            {clinicData.map((item: any, id: number) => {
               return (
                 <ClinicPoint key={id} item={item} handleLatLng={handleLatLng} />
               );
