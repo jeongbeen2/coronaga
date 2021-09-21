@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { CaseData } from "../../@types/caseData";
 
 import "./Nav.css";
 
@@ -35,7 +36,7 @@ export const NavBar = styled.div`
   }
 `;
 
-function Nav({ domestic, local }: any): JSX.Element {
+function Nav({ domestic, local }: CaseData): JSX.Element {
   return (
     <div>
       <NavBar>

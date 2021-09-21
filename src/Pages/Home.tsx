@@ -8,12 +8,12 @@ function Home(): JSX.Element {
     <>
       <div className="home_body">
         <div className="card-news">
-          {firstCardNews.map((card: any, id: number) => (
+          {firstCardNews.map((card: string, id: number) => (
             <img key={id} src={card} alt="img" />
           ))}
         </div>
         <div className="card-news">
-          {secondCardNews.map((card: any, id: number) => (
+          {secondCardNews.map((card: string, id: number) => (
             <img key={id} src={card} alt="img" />
           ))}
         </div>

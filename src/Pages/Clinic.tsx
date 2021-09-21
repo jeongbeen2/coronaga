@@ -4,31 +4,47 @@ import ClinicList from "../Components/Clinic/ClinicList";
 import ClinicMap from "../Components/Clinic/ClinicMap";
 import "./Style/Clinic.css";
 
+interface ClinicValue {
+  LAT: string;
+  LOGT: string;
+  MEDCARE_INST_NM: string;
+}
+
 function Clinic() {
   const [clinicData, setClinicData] = useState<string>("검색어를 입력하세요!");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [search, setSearch] = useState<string>("");
   const [LatLng, setLatLng] = useState([]) as any;
 
-  function handleLatLng(LAT: any, LOGT: any, MEDCARE_INST_NM: any) {
+  function handleLatLng(
+    LAT: string,
+    LOGT: string,
+    MEDCARE_INST_NM: ClinicValue
+  ) {
     setLatLng([LAT, LOGT, MEDCARE_INST_NM]);
   }
 
-  function handleSearch(value: any) {
+  function handleSearch(value: string) {
     setSearch(value);
   }
 
-  function importClinicData(search: any) {
+  function importClinicData(search: string) {
+    console.log("###", search);
     setIsLoading(true);
-    clinic(search).then((data: any) => {
-      if (!data.EmgMedInfo) {
-        console.log("데이터없음");
-        setClinicData("");
-      } else {
-        setClinicData(data.EmgMedInfo[1].row);
-      }
-      setIsLoading(false);
-    });
+    clinic(search)
+      .then((data: any) => {
+        console.log("###", data);
+        if (!data.EmgMedInfo) {
+          console.log("데이터없음");
+          setClinicData("");
+        } else {
+          setClinicData(data.EmgMedInfo[1].row);
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+      });
   }
 
   return (

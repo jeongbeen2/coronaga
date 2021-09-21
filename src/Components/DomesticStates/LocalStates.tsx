@@ -1,8 +1,9 @@
 import React from "react";
 import LocalState from "./LocalState";
 import "./Style/LocalStates.css";
+import { CaseData } from "../../@types/caseData";
 
-function LocalStates({ local }: any): JSX.Element {
+function LocalStates({ local }: CaseData): JSX.Element {
   const {
     korea,
     seoul,

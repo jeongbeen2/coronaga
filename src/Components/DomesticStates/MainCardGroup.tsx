@@ -1,8 +1,9 @@
 import React from "react";
 import "./Style/MainCardGroup.css";
 import CountUp from "react-countup";
+import { CaseData } from "../../@types/caseData";
 
-function CardGroup({ domestic, local }: any): JSX.Element {
+function CardGroup({ domestic, local }: CaseData): JSX.Element {
   const {
     TotalCase,
     TotalCaseBefore,
@@ -19,7 +20,7 @@ function CardGroup({ domestic, local }: any): JSX.Element {
 
   // ? ###########  string number -> number #########
   // ex) 143,733 -> 143733
-  const changeNumber = (num: any) => {
+  const changeNumber = (num: string): number => {
     let result = "";
     for (let i = 0; i < num.length; i++) {
       if (num[i] !== ",") {

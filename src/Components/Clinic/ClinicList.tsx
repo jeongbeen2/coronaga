@@ -2,6 +2,10 @@ import React from "react";
 import ClinicPoint from "./ClinicPoint";
 import "./Style/ClinicList.css";
 
+interface ClinicDetail {
+  item: any;
+}
+
 function ClinicList({
   handleSearch,
   importClinicData,
@@ -43,7 +47,7 @@ function ClinicList({
           )
         ) : (
           <>
-            {clinicData.map((item: any, id: number) => {
+            {clinicData.map((item: ClinicDetail, id: number) => {
               return (
                 <ClinicPoint key={id} item={item} handleLatLng={handleLatLng} />
               );

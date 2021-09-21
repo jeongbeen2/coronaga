@@ -1,6 +1,6 @@
 import axios from "axios";
 const { CLINIC } = require("./personalKey")[0];
-export function clinic(search: any) {
+export function clinic(search: string) {
   let SEARCH;
   let goon = ["가평", "가평시", "양평", "양평시", "연천", "연천시"];
   let lastWord = search[search.length - 1];
