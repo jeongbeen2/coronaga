@@ -15,7 +15,7 @@ function ClinicMap({ LatLng }: any): JSX.Element {
     let map = new kakao.maps.Map(container, options); // 지도를 생성합니다
     function setDraggable(draggable: any) {
       // 마우스 드래그로 지도 이동 가능여부를 설정합니다
-      map.setDraggable(draggable);
+      map && map.setDraggable(draggable);
     }
     // 마커가 표시될 위치입니다
     var markerPosition = new kakao.maps.LatLng(Lat, Lng);
